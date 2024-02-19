@@ -45,3 +45,7 @@ function updateGrandTotal(){
     grandTotalPrice.innerText = updatePrice;
 
 }
+
+function reloadPage(){
+    window.location.reload();
+}
