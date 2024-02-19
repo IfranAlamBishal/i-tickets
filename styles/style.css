@@ -10,3 +10,17 @@
 .primary-color{
     color: #1dd100;
 }
+.primary-bg{
+    background-color: #1dd100;
+}
+
+.bus-seats{
+    background-color: #f7f8f8;
+    color: #03071280;
+    font-family: "Inter", sans-serif;
+}
+
+.updated-seat{
+    background-color: #1dd100;
+    color: white;
+}
