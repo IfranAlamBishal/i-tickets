@@ -21,3 +21,27 @@ function changeBackgroundColor(elementId){
     seat.classList.remove('bus-seats');
     seat.classList.add('updated-seat');
 }
+
+function disableButton(elementName){
+    const disableBtn = elementName;
+    disableBtn.disabled = true; 
+}
+
+
+function updateTotalPrice(){
+    const totalPrice = document.getElementById('total-price');
+    const totalPriceElement = totalPrice.innerText;
+    const convetPrice = parseInt(totalPriceElement);
+    const updatePrice = convetPrice + 550;
+    totalPrice.innerText = updatePrice;
+
+}
+
+function updateGrandTotal(){
+    const grandTotalPrice = document.getElementById('grand-total');
+    const grandtotalPriceElement = grandTotalPrice.innerText;
+    const convetPrice = parseInt(grandtotalPriceElement);
+    const updatePrice = convetPrice + 550;
+    grandTotalPrice.innerText = updatePrice;
+
+}

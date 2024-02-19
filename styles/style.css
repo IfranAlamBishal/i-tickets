@@ -24,3 +24,11 @@
     background-color: #1dd100;
     color: white;
 }
+
+.ticket-details{
+    display: flex ;
+    justify-content: space-around;
+    gap: 110px;
+    margin-top: 16px;
+
+}
