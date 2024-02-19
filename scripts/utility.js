@@ -49,3 +49,16 @@ function updateGrandTotal(){
 function reloadPage(){
     window.location.reload();
 }
+function enableBtn(){
+    const enable = document.getElementById('next-btn');
+    enable.disabled = false;
+}
+
+function showDiscount(){
+    const discountContainer = document.getElementById('discount-contaoner');
+    discountContainer.classList.remove('hidden');
+}
+function hideInput(){
+    const hideInput = document.getElementById('input-field');
+    hideInput.classList.add('hidden');
+}

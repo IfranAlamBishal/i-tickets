@@ -14,6 +14,7 @@ for(let index = 0; index < seats.length; index++){
         const seatCount = document.getElementById('selected-seats');
         const seatCountElement = seatCount.innerText;
         const seatCountNumber = parseInt(seatCountElement);
+        enableBtn();
 
 
     if( seat.classList.contains('updated-seat')){
@@ -50,3 +51,43 @@ for(let index = 0; index < seats.length; index++){
     });
 }
 
+
+    const applyBtn = document.getElementById('apply-btn');
+    applyBtn.addEventListener("click" , function(){
+    const couponCode = document.getElementById('coupon-input').value;
+    const seatCountNumber = document.getElementById('selected-seats').innerText
+    const totalSeatNumber = parseInt(seatCountNumber);
+        
+
+        if(totalSeatNumber === 4){
+            if(couponCode === 'NEW15'){
+                const discountElement = document.getElementById('discount');
+                const grandTotalPrice = document.getElementById('grand-total');
+                const grandtotalPriceElement = grandTotalPrice.innerText;
+                const convetPrice = parseInt(grandtotalPriceElement);
+                const discountAmount = convetPrice * 0.15;
+                const discount = convetPrice - discountAmount ;
+                discountElement.innerText = discountAmount.toFixed(2);
+                grandTotalPrice.innerText = discount;
+                showDiscount();
+                hideInput();
+
+
+            }
+            else if(couponCode === 'Couple 20'){
+                const discountElement = document.getElementById('discount');
+                const grandTotalPrice = document.getElementById('grand-total');
+                const grandtotalPriceElement = grandTotalPrice.innerText;
+                const convetPrice = parseInt(grandtotalPriceElement);
+                const discountAmount = convetPrice * 0.2;
+                const discount = convetPrice - discountAmount;
+                discountElement.innerText = discountAmount.toFixed(2);
+                grandTotalPrice.innerText = discount;
+                showDiscount();
+                hideInput();
+            }
+            else{
+                alert("Invalid Coupon Code.")
+            }
+        }
+    });
